@@ -663,5 +663,14 @@
             });
           })();
         </script>
+<script>
+(() => {
+  const menus = document.querySelectorAll("#rwts-menus details.rwts-details");
+  menus.forEach((d) => d.addEventListener("toggle", () => {
+    if (!d.open) return;
+    menus.forEach((o) => { if (o !== d) o.open = false; });
+  }));
+})();
+</script>
 </body>
 </html>
